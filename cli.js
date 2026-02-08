@@ -79,13 +79,16 @@ async function exportBackup() {
     memoryPaths
   });
 
+  // Count files before they might be encrypted
+  const totalFiles = credentialsPaths.length + memoryPaths.length;
+
   await writeFile(output, JSON.stringify(data, null, 2));
   
   const fingerprint = AgentBackup.fingerprint(data);
   console.log(`✅ Backup created: ${output}`);
   console.log(`📋 Fingerprint: ${fingerprint}`);
   console.log(`🔒 Encrypted: ${data.encrypted || false}`);
-  console.log(`📁 Files: ${(data.credentials.files?.length || 0) + (data.memory.files?.length || 0)}`);
+  console.log(`📁 Files: ${totalFiles}`);
 }
 
 async function importBackup() {
