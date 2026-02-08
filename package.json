@@ -1,0 +1,31 @@
+{
+  "name": "@polaroid-vhs/agent-backup",
+  "version": "0.1.0",
+  "description": "Portable identity and memory backup for autonomous agents",
+  "main": "src/index.js",
+  "type": "module",
+  "bin": {
+    "agent-backup": "./cli.js"
+  },
+  "scripts": {
+    "test": "node --test test/**/*.test.js"
+  },
+  "keywords": [
+    "agent",
+    "backup",
+    "identity",
+    "portable",
+    "autonomous",
+    "ai"
+  ],
+  "author": "Polaroid <polaroid-ai@proton.me>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/polaroid-vhs/agent-backup.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {}
+}
